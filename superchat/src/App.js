@@ -43,6 +43,14 @@ function SignIn() {
     auth.signInWithPopup(provider);
   }
 
+  return (
+  <>
+  <button onClick={signInWithGoogle}>Sign in with Google</button>
+  </>
+  )
+  
+}
+
 function SignOut() {
   return auth.currentUser && (
 
@@ -58,12 +66,15 @@ function ChatRoom() {
   const [messages] = useCollectionData(query, {idField: 'id'});
 }
 
-  return (
-    // <button onClick={signInWithGoogle}>Sign in with Google</button>
-    <div>
-      {messages && messages.map(mes => <ChatMessage key={msg.id} message={msg} />)}
-    </div>
-  )
+function ChatMessage(props) {
+
+  return<p></p>
 }
+
+  // return (
+  //   <div>
+  //     {messages && messages.map(mes => <ChatMessage key={msg.id} message={msg} />)}
+  //   </div>
+  // )
 
 export default App;
