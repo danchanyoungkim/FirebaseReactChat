@@ -59,7 +59,10 @@ function ChatRoom() {
 }
 
   return (
-    <button onClick={signInWithGoogle}>Sign in with Google</button>
+    // <button onClick={signInWithGoogle}>Sign in with Google</button>
+    <div>
+      {messages && messages.map(mes => <ChatMessage key={msg.id} message={msg} />)}
+    </div>
   )
 }
 
